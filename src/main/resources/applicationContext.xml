@@ -11,4 +11,11 @@
      <context:component-scan base-package="org.songdan.mock">
             <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
      </context:component-scan>
+
+     <bean id="userBean" class="org.songdan.bean.UserBean">
+            <property name="username" value="hello world"/>
+            <property name="password" value="password"/>
+     </bean>
+       <bean id="usernameBeanPostProcessor" class="org.songdan.bean.UsernameBeanPostProcessor"/>
+     <bean id="usernameBeanFactoryPostProcessor" class="org.songdan.bean.UsernameBeanFactoryPostProcessor"></bean>
 </beans>
